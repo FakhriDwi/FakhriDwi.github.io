@@ -1,0 +1,32 @@
+html,body{font:14px arial;}
+.container{
+    display:table;
+    width:600;
+    border-collapse:collapse;
+    margin:0 auto;
+    line-height:2;
+}
+
+.heading{
+    display:table-row;
+    text-align:center;
+
+}
+.table-row{  
+    display:table-row;
+    text-align:center;
+}
+.strip{  
+    display:table-row;
+    text-align:center;
+    background-color:#f0f0f0;
+}
+.col{ 
+	display:table-cell;
+    border:1px solid #CCC;
+}
+	
+.merger{ 
+	display:table-cell;
+    border:1px solid #CCC;
+}

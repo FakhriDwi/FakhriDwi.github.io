@@ -1,0 +1,27 @@
+.Utama{
+	width:800;
+	height:600;
+	margin:0 auto;
+	padding:20;
+
+}
+.Pertama{
+	width:800;
+	height:150;
+	border:2px solid black;
+	margin-bottom:2px;
+
+}
+.Kedua{
+	width:800;
+	height:400;
+	border:2px solid black;
+
+}
+.Ketiga{
+	width:800;
+	height:50;
+	border:2px solid black;
+	margin-top:2px;
+
+}

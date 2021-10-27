@@ -1,0 +1,65 @@
+.Utama{
+	width:500;
+	height:250;
+	margin:0 auto;
+	background-color:cyan;
+
+}
+.Pertama{
+	width:500;
+	height:50;
+	background-color:yellow;
+	text-align:center;
+	line-height:3;
+
+}
+.Kedua{
+	width:500;
+	height:150;
+
+}
+.Ketiga{
+	width:500;
+	height:50;
+	background-color:pink;
+	text-align:center;
+	line-height:3;
+
+}
+.Kiri{
+	width:150;
+	height:150;
+	float:left;
+}
+.Kanan{
+	width:350;
+	height:150;
+	background-color:red;
+	float:left;
+	text-align:center;
+	line-height:9;
+}
+.a{
+	width:150;
+	height:50;
+	text-align:center;
+	background-color:green;
+	line-height:3;
+
+}
+.b{
+	width:150;
+	height:50;
+	background-color:blue;
+	text-align:center;
+	line-height:3;
+
+}
+.c{
+	width:150;
+	height:50;
+	background-color:purple;
+	text-align:center;
+	line-height:3;
+
+}
