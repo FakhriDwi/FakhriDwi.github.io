@@ -1,0 +1,62 @@
+.container {
+  margin-top: 3%;
+}
+
+.header {
+  width: 500px;
+  margin: auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: white;
+  text-transform: uppercase;
+  border-top: 5px solid blue;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.judul {
+  width: 500px;
+  margin: auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.konten {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.register {
+  background-color: #e9ecef;
+}
+
+h1 {
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+h1:hover {
+  color: skyblue;
+}
+h3 {
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px 10px;
+  background-color: rgb(241, 237, 237);
+  border: 1px solid rgb(214, 214, 214);
+}
+
+button {
+  width: 100%;
+}

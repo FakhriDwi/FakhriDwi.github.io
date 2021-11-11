@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Tugas Prak Pert 7</title>
+    </head>
+  <body>
+      <script>
+          var a=100;
+          var b=5;
+
+          function prosespenjumlahan(a,b){
+            var hasil;
+            hasil = a + b;
+            return hasil;
+        }
+        function prosespengurangan(a,b){
+            var hasil;
+            hasil = a - b;
+            return hasil;
+        }
+        function prosesperkalian(a,b){
+            var hasil;
+            hasil = a * b;
+            return hasil;
+        }
+        function prosespembagian(a,b){
+            var hasil;
+            hasil = a / b;
+            return hasil;
+        }
+        function prosesmodulo(a,b){
+            var hasil;
+            hasil = a % b;
+            return hasil;
+        }
+        hasil = prosespenjumlahan(a,b);
+        document.write(`${a}+${b}=${hasil}<br/>`);
+        hasil = prosespengurangan(a,b);
+        document.write(`${a}-${b}=${hasil}<br/>`);
+        hasil = prosesperkalian(a,b);
+        document.write(`${a}*${b}=${hasil}<br/>`);
+        hasil = prosespembagian(a,b);
+        document.write(`${a}/${b}=${hasil}<br/>`);
+        hasil = prosesmodulo(a,b);
+        document.write(`${a}%${b}=${hasil}<br/>`);
+    </script>
+
+      </script>
+  </body>
+</html>
