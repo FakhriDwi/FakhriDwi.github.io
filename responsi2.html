@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Responsi 2</title>
+    <style>
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+      .form input {
+        width: 200px;
+        height: 20px;
+      }
+      .form select {
+        width: 200px;
+        height: 20px;
+      }
+      .form button {
+        width: 200px;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Daftar Pemain</h1>
+    <h1>Daftar Pemain</h1>
+    <form>
+      <div class="isi">
+        <label for="kd">Kd_Pemain</label>
+        <input type="auto" name="kd" id="kd" />
+      </div>
+      <div class="isi">
+        <label for="nama">Nama_Pemain</label>
+        <input type="text" name="nama" id="nama" size="25" />
+      </div>
+      <div class="isi">
+        <label for="email">Email_Pemain</label>
+        <input type="email" name="email" id="email" size="25" />
+      </div>
+      <div class="isi">
+        <label for="posisi">Posisi_Pemain</label>
+        <select name="posisi" id="posisi">
+          <option value="0" hidden>-- Posisi Pemain --</option>
+          <option value="Mid">Mid</option>
+          <option value="Top">Top</option>
+          <option value="ADC">ADC</option>
+          <option value="Support">Support</option>
+          <option value="Jungle">Jungle</option>
+          <option value="Substitute">Substitute</option>
+        </select>
+      </div>
+      <br />
+      <button>Tambah</button>
+    </form>
+    <br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Kd_Pemain</th>
+          <th>Nama_Pemain</th>
+          <th>Email_Pemain</th>
+          <th>Posisi Pemain</th>
+          <th>opsi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script langguage="JavaScript">
+      const formEl = document.querySelector("form");
+      const tbodyEl = document.querySelector("tbody");
+      const tableEl = document.querySelector("table");
+      function onAddnim(e) {
+        if (confirm("Apakah anda yakin ingin menambahkan data?")) {
+          e.preventDefault();
+          const kd = document.getElementById("kd").value;
+          const nama = document.getElementById("nama").value;
+          const email = document.getElementById("email").value;
+          const posisi = document.getElementById("posisi").value;
+          tbodyEl.innerHTML += `
+<tr>
+<td>${kd}</td>
+<td>${nama}</td>
+<td>${email}</td>
+<td>${posisi}</td>
+<td>
+<button align="center"> Hapus </button>
+</td>
+</tr>
+`;
+        } else {
+          e.preventDefault();
+          alert("Batal menambahkan data");
+        }
+      }
+      function onDeleteRow(e) {
+        if (confirm("Apakah anda yakin ingin menghapus data?")) {
+          alert("Data akan dihapus");
+          const btn = e.target;
+          btn.closest("tr").remove();
+        } else {
+          alert("Batal menghapus data");
+          return false;
+        }
+      }
+      formEl.addEventListener("submit", onAddnim);
+      tableEl.addEventListener("click", onDeleteRow);
+    </script>
+
+  </body>
+</html>

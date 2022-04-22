@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>penghasilan</title>
+  </head>
+
+  <body>
+    <h1>PENGHASILAN</h1>
+    Penghasilannya adalah Rp<span id="penghasilan"></span>
+  </body>
+  <script>
+    isian = JSON.parse(localStorage.getItem("data_isian"));
+
+    let penghasilan = 0;
+    for (const key of Object.keys(isian)) {
+      if (!isian.hasOwnProperty(key)) continue;
+      isian1 = isian[key];
+      if (isian1.posisi == "Substitute") {
+        penghasilan += 800000;
+      } else {
+        penghasilan += 150000;
+      }
+    }
+    document.getElementById("penghasilan").innerHTML = penghasilan;
+  </script>
+</html>

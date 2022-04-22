@@ -22,9 +22,7 @@
         a.appendChild(li);
       }
 
-      // Creating a function to remove item from list
       function removeItem() {
-        // Declaring a variable to get select element
         var a = document.getElementById("list");
         var candidate = document.getElementById("candidate");
         var item = document.getElementById(candidate.value);
@@ -42,3 +40,14 @@
     </script>
   </body>
 </html>
+let penghasilan = 0;
+for (const key of Object.keys(isian)) {
+  if (!isian.hasOwnProperty(key)) continue;
+  isian1 = isian[key];
+  if (isian1.posisi == "Substitute") {
+    penghasilan += 800000;
+  } else {
+    penghasilan += 150000;
+  }
+}
+document.getElementById("penghasilan").innerHTML = penghasilan;

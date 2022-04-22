@@ -1,44 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <style>
-    label.form_text > span {
-      display: inline-block;
-      min-width: 100px;
-    }
-    textarea {
-      resize: none;
-      border-radius: 0.25vw;
-    }
-  </style>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      function validation() {
-        let x = document.forms["survey-form"]["nama"].value;
-        if (x == "") {
-          alert("Mohon isikan data dengan benar!");
-          return false;
-        }
-      }
-    </script>
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="#" name="survey-form" onsubmit="return validation()">
-      <div class="container">
-        <label for="nama" class="form_text"><span>Nama</span>:</label>
-        <input type="text" name="nama" id="nama" placeholder="Masukkan nama" />
-        <br />
-        <label for="nama" class="form_text"><span>Password</span>:</label>
-        <input type="password" name="nama" id="pwd" placeholder="• • • • • •" />
-        <br />
-        <label class="form_text" for="komentar" id="komentar"><span>Komentar</span>:</label>
-        <textarea name="komentar" id="komentar" cols="30" rows="5"></textarea>
-        <br />
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  </body>
+<html>
+	<body>
+		<table border="1" color="yellow">
+			<tr rowspan align="center">
+				<td>KELOMPOK</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+			</tr>
+			<tr>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+			</tr>
+			<tr>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+				<td>KELOMPOK</td>
+			</tr>
+		</table>
+	
+	
+	</body>
+
 </html>

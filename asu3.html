@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Responsi 2</title>
+  </head>
+
+  <body>
+    <h1>Daftar Pemain</h1>
+
+    <div class="form" >
+        <label for="kd">KD Pemain</label>
+        <input type="number" name="kd" id="kd" maxlength="11">
+    </div>
+    <div class="form">
+        <label for="nama">Nama Pemain</label>
+        <input type="text" name="nama" id="nama" maxlength="25">
+    </div>
+    <div class="form">
+        <label for="email">Email Pemain</label>
+        <input type="email" name="email" id="email" maxlength="25">
+    </div>
+    <div class="form">
+        <label for="posisi">Posisi Pemain</label>
+        <select name="posisi" id="posisi">
+            <option value="0" hidden>------------</option>
+            <option value="Mid">Mid</option>
+            <option value="Top">Top</option>
+            <option value="ADC">ADC</option>
+            <option value="Support">Support</option>
+            <option value="Jungle">Jungle</option>
+            <option value="Substitute">Substitute</option>
+        </select>
+</br>
+</br>
+</div>
+        <button name="tambah" id="tambah">Tambah Pemain</button>
+    
+</br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>KD Pemain</th>
+            <th>Nama Pemain</th>
+            <th>Email Pemain</th>
+            <th>Posisi Pemain</th>
+            <th>Edit/Hapus</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+    <script>
+        let isian = {};
+        let table = document.querySelector('table');
+        let tbody = table.querySelector('tbody');
+        let input_kd = document.querySelector('#kd');
+        let input_nama = document.querySelector('#nama');
+        let input_email = document.querySelector('#email');
+        let input_posisi = document.querySelector('#posisi');
+        let tambah = document.querySelector('#tambah');
+        isi();
+
+        tambah.addEventListener("click", () => {
+            let kd = input_kd.value;
+            let nama = input_nama.value;
+            let email = input_email.value;
+            let posisi = input_posisi.value;
+            if(confirm("Apakah anda yakin? ")){
+                let isian1 = {
+                    nama,
+                    email,
+                    posisi
+                };
+                isian[kd] = isian1;
+                input_kd.disabled = false;
+                input_kd.value="";
+                input_nama.value="";
+                input_email.value="";
+                input_posisi.value="";
+                isi();
+            }
+       });
+
+       function isi(){
+           tbody.innerHTML='';
+
+          for(const key of Object.keys(isian)) {
+            if(!isian.hasOwnProperty(key)) continue;
+            const isian1 = isian[key];
+            let tr = document.createElement('tr');
+            let td_kd = document.createElement('td');
+            let td_nama = document.createElement('td');
+            let td_email = document.createElement('td');
+            let td_posisi = document.createElement('td');
+            let td_opsi = document.createElement('td');
+            let a_ed = document.createElement('a');
+            let a_del = document.createElement('a');
+            a_ed.innerHTML='edit';
+            a_del.innerHTML='hapus';
+            a_ed.setAttribute('href','#');
+            a_del.setAttribute('href','#');
+            a_ed.addEventListener('click',editdong);
+            a_del.addEventListener('click',deletedong);
+            td_kd.innerHTML = key;
+            td_nama.innerHTML = isian1.nama;
+            td_email.innerHTML = isian1.email;
+            td_posisi.innerHTML = isian1.posisi;
+            td_opsi.appendChild(a_ed);
+            td_opsi.appendChild(a_del);
+            tr.appendChild(td_kd);
+            tr.appendChild(td_nama);
+            tr.appendChild(td_email);
+            tr.appendChild(td_posisi);
+            tr.appendChild(td_opsi);
+            tbody.appendChild(tr);     
+    }
+    
+       }
+      
+
+       function editdong(edit){
+           let kd=edit.target.parentNode.parentNode.childNodes[0].innerHTML;
+           let nama=edit.target.parentNode.parentNode.childNodes[1].innerHTML;
+           let email=edit.target.parentNode.parentNode.childNodes[2].innerHTML;
+           let posisi=edit.target.parentNode.parentNode.childNodes[3].innerHTML;
+           input_kd.value=kd;
+           input_kd.disabled = true;
+           input_nama.value=nama;
+           input_email.value=email;
+           input_posisi.value=posisi;
+       }
+
+       function deletedong(edit){
+           let kd=edit.target.parentNode.parentNode.childNodes[0].innerHTML;
+           if(confirm("Apakah Anda Yakin Untuk Menghapus?")){
+            alert("Data Dihapus");
+            delete isian[kd];
+            isi();
+           }   
+       }
+      
+       
+
+
+    </script>
+  </body>
+</html>
